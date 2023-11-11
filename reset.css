@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 1em;
+  color: #222;
+  background-color: #eee;
+  width: 1600px;
+  font-family: "Inter Tight";
+
+  @media (width < 1024px) {
+    width: 93%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0.35em 0;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  border: none;
+  outline: none;
+  padding: 0.35em 1em;
+  display: block;
+  background: inherit;
+}
+
+input,
+select {
+  border: 2px #0002 solid;
+  border-radius: 0.4em;
+  transition: all 0.25s ease-in-out;
+  padding: 0.25em;
+  background-color: #fff;
+
+  &::placeholder {
+    color: #0005;
+  }
+
+  &:focus {
+    border: 2px #0006 solid;
+  }
+}
+
+button {
+  cursor: pointer;
+  border-radius: 0.45em;
+  border: 2px #0003 solid;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    border: 2px #44f solid;
+    filter: drop-shadow(0 0 0.35em #44f6);
+  }
+}
+
+img,
+iframe,
+figure,
+blockquote {
+  width: 100%;
+}
+
+blockquote {
+  margin: 1em 0;
+}
+
+blockquote > p {
+  padding: 1em;
+  border-radius: 0.4em;
+  border-left: 0.5em #66f solid;
+  background-color: #88f;
+  position: relative;
+  box-shadow:
+    0 0 1em #88f6,
+    inset 0 0 0.25em #66f;
+}
+
+blockquote > blockquote > p {
+  border-left: 0.5em #22f solid;
+  background-color: #44f;
+  box-shadow:
+    0 0 1em #44f6,
+    inset 0 0 0.25em #22f;
+}
+
+blockquote > blockquote > blockquote > p {
+  border-left: 0.5em #f33 solid;
+  background-color: #f55;
+  box-shadow:
+    0 0 1em #f556,
+    inset 0 0 0.25em #f33;
+}
+
+ul {
+  list-style-type: circle;
+  padding: 1em 0;
+  margin-left: 1em;
+  line-height: 1.5em;
+}
+
+figcaption {
+  font-size: 0.8rem;
+
+  &::before {
+    content: "» ";
+    color: #f33;
+  }
+}
+
+footer {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 1em 0;
+
+  & * {
+    display: contents;
+  }
+}
